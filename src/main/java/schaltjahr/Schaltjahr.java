@@ -3,7 +3,7 @@ package schaltjahr;
 public class Schaltjahr {
 
     public static void main(String[] args) {
-    Schaltjahr schaltjahr = new Schaltjahr();
+        Schaltjahr schaltjahr = new Schaltjahr();
 
         System.out.println("Sollte Schaltjahre sein:");
         System.out.println(schaltjahr.pruefeJahr(4));
@@ -18,14 +18,12 @@ public class Schaltjahr {
         System.out.println(schaltjahr.pruefeJahr(100));
         System.out.println(schaltjahr.pruefeJahr(1900));
 
-
-
     }
 
     public String pruefeJahr(int jahr) {
         if (jahr % 4 == 0) {
-            if (jahr %100 == 0) {
-                if (jahr % 400 == 0){
+            if (jahr % 100 == 0) {
+                if (jahr % 400 == 0) {
                     return "Schaltjahr";
                 } else {
                     return "kein Schaltjahr";
