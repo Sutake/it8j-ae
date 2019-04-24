@@ -1,14 +1,16 @@
 package portoRechner;
 
+import java.util.Scanner;
+
 public class PortoRechner {
 
     public static void main(String[] args) {
         PortoRechner portoRechner = new PortoRechner();
-        System.out.println(portoRechner.berechneKosten(99));
-        System.out.println(portoRechner.berechneKosten(100));
-        System.out.println(portoRechner.berechneKosten(101));
-        System.out.println(portoRechner.berechneKosten(199));
-        System.out.println(portoRechner.berechneKosten(200));
+
+        System.out.println("Geben Sie die Gesamtsumme ein. Wir werden Ihnen die Porto- und Versandkosten berechnen: ");
+        int auftragssumme = new Scanner(System.in).nextInt();
+        System.out.println("Sie müssen " + portoRechner.berechneKosten(auftragssumme) + "€ Porto/Versand bezahlen");
+
 
     }
 
