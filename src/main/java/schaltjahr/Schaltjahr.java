@@ -17,7 +17,6 @@ public class Schaltjahr {
         System.out.println(schaltjahr.pruefeJahr(2));
         System.out.println(schaltjahr.pruefeJahr(100));
         System.out.println(schaltjahr.pruefeJahr(1900));
-
     }
 
     public String pruefeJahr(int jahr) {
