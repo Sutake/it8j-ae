@@ -4,7 +4,6 @@ public class Verzinsung {
     public static void main(String[] args) {
         Verzinsung verzinsung = new Verzinsung();
         System.out.println("Nach " + verzinsung.millionaerMacher(1000, 2) + " Jahren ist die Einlage auf " + verzinsung.getKontostand() + "€ gewachsen");
-
     }
 
     private double einlage;
