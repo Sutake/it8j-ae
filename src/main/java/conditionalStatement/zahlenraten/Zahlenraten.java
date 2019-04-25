@@ -1,4 +1,4 @@
-package zahlenraten;
+package conditionalStatement.zahlenraten;
 
 import java.util.Random;
 import java.util.Scanner;

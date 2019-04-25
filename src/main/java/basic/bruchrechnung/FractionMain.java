@@ -1,4 +1,4 @@
-package bruchrechnung;
+package basic.bruchrechnung;
 
 public class FractionMain {
     public static void main(String[] args) {

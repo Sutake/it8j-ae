@@ -1,4 +1,4 @@
-package geldautomat;
+package basic.geldautomat;
 
 import java.util.Scanner;
 

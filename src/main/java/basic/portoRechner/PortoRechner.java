@@ -1,4 +1,4 @@
-package portoRechner;
+package basic.portoRechner;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package bruchrechnung;
+package basic.bruchrechnung;
 
 public class Fraction {
     private int numerator;

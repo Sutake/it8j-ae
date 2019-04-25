@@ -1,4 +1,4 @@
-package schaltjahr;
+package conditionalStatement;
 
 public class Schaltjahr {
 

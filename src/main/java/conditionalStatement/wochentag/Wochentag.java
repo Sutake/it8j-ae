@@ -1,4 +1,4 @@
-package wochentag;
+package conditionalStatement.wochentag;
 
 import java.util.Scanner;
 

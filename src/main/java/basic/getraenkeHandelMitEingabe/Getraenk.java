@@ -1,4 +1,4 @@
-package getraenkeHandelMitEingabe;
+package basic.getraenkeHandelMitEingabe;
 
 public class Getraenk {
 
