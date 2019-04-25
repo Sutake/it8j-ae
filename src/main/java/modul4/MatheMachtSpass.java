@@ -1,4 +1,4 @@
-package basic.mathe;
+package modul4;
 
 
 public class MatheMachtSpass {

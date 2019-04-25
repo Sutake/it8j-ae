@@ -1,4 +1,4 @@
-package basic.geldautomat;
+package modul3.geldautomat;
 
 public class Konto {
     private double kontostand;

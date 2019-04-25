@@ -1,4 +1,4 @@
-package basic.getraenkeHandelMitEingabe;
+package modul3.getraenkeHandelMitEingabe;
 
 import java.util.Scanner;
 
