@@ -30,7 +30,6 @@ public class MatheMachtSpass {
         System.out.println("Zweites Dreieck mit den Seitenlängen " + matheMachtSpass1.getA() + ", " + matheMachtSpass1.getB() + "und " + matheMachtSpass1.getC() +":");
         ausgabeDreieck(matheMachtSpass2);
         ausgabePythagoras(matheMachtSpass2);
-
     }
 
     private int a;

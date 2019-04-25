@@ -24,7 +24,7 @@ public class Luftmessung {
         this.grenzwert = grenzwert;
     }
 
-    public void pruefe(double wert){
+    public void pruefe(double wert) {
         System.out.println("Der Genzwert beträgt " + grenzwert + " ppm");
         System.out.println("Der Messwert beträgt " + wert + " ppm");
         if (wert < this.grenzwert) {

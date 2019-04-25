@@ -1,10 +1,6 @@
 package modul4;
 
 public class Taschenrechner {
-    private double zahl1;
-    private double zahl2;
-    private char operator;
-
     public static void main(String[] args) {
         Taschenrechner taschenrechner = new Taschenrechner();
         taschenrechner.setZahl1(20);
@@ -15,8 +11,11 @@ public class Taschenrechner {
         } else {
             taschenrechner.berechne();
         }
-
     }
+
+    private double zahl1;
+    private double zahl2;
+    private char operator;
 
     public Taschenrechner() {
 
