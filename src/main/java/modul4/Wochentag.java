@@ -31,6 +31,5 @@ public class Wochentag {
             default:
                 return "You didn't type a valid number";
         }
-
     }
 }
