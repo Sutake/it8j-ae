@@ -3,16 +3,16 @@ package modul4;
 public class MultiplicationTable {
     public static void main(String[] args) {
 
+        System.out.print("\t");
         for (int i = 1; i <= 10; i++) {
+            System.out.print(i + "\t");
+        }
+        System.out.println();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + "\t");
             for (int j = 1; j <= 10; j++) {
-                //cares for the indenting depending on the number of digit
-                if (i * j < 10) {
-                    System.out.print(" ");
-                }
-                if (i * j < 99) {
-                    System.out.print(" ");
-                }
-                System.out.print(i * j + " ");
+                System.out.print(i * j + "\t");
             }
             System.out.println();
         }
