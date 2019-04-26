@@ -1,4 +1,4 @@
-package modul4;
+package modul4.chapter3;
 
 public class Sofortrente {
 
