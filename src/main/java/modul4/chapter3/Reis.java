@@ -4,6 +4,8 @@ public class Reis {
     public static void main(String[] args) {
         Reis reis = new Reis();
         reis.summiere();
+        System.out.println();
+        System.out.println("You need " + reis.wiegen() + " wagons to transport the amount of rice grain.");
     }
 
     private double summe;
@@ -14,5 +16,11 @@ public class Reis {
             System.out.println(summe);
         }
         return summe;
+    }
+
+    public double wiegen() {
+        double result = summiere() / 200; //rice in gram
+        result = result / 1000000; //rice in metric tons
+        return result / 30;
     }
 }

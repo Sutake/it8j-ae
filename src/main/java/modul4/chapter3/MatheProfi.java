@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MatheProfi {
     public static void main(String[] args) {
-        int x = 100;
+        int x = 8;
         int i = x;
         List<Integer> listInt = new ArrayList<>();
 
