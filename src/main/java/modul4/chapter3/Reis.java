@@ -4,7 +4,6 @@ public class Reis {
     public static void main(String[] args) {
         Reis reis = new Reis();
         reis.summiere();
-
     }
 
     private double summe;
