@@ -25,8 +25,8 @@ public class Baufinanzierung {
     }
 
     public void erstelleTilgungsplan() {
-        double zinsen = this.darlehensbetrag * zinssatz / 100;
-        double tilgung = this.darlehensbetrag * tilgungssatz / 100;
+        double zinsen = darlehensbetrag * zinssatz / 100;
+        double tilgung = darlehensbetrag * tilgungssatz / 100;
 
         double jahr = 1;
         double annuitaet = zinsen + tilgung;
