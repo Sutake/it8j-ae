@@ -1,3 +1,5 @@
+package modul4.chapter3;
+
 import modul4.chapter3.KreditkartenPruefer;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
