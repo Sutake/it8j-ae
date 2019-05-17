@@ -31,9 +31,16 @@ public class TestStatistik {
         assertEquals(5.3, statistik.berechneMax());
     }
 
+     @Test
+    public void testSumme() {
+        Statistik statistik = new Statistik(new double[]{1.4, 5.3, 1.4, 1, 3.2});
+        assertEquals(12.3, statistik.berechneSumme());
+    }
+
+
     @Test
     public void testModus() {
         Statistik statistik = new Statistik(new double[]{1.4, 5.3, 1.4, 1, 3.2});
-        assertEquals(2, statistik.berechneModus());
+        assertEquals(1.4, statistik.berechneModus());
     }
 }
