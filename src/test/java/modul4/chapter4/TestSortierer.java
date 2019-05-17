@@ -1,14 +1,15 @@
 package modul4.chapter4;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestSortierer {
 
     @Test
     void testInsertNumberInArray() {
         Sortierer sortierer = new Sortierer();
-        int [] result = new int[]{17,32,45,50,53,61,62,75};
         int[] actualArray = new int[8];
         actualArray[0] = 17;
         actualArray[1] = 32;
@@ -18,6 +19,6 @@ public class TestSortierer {
         actualArray[5] = 62;
         actualArray[6] = 75;
 
-        Assertions.assertArrayEquals(result, sortierer.insertNumberInArray(actualArray,50));
+        assertArrayEquals(new int[]{17, 32, 45, 50, 53, 61, 62, 75}, sortierer.insertNumberInArray(actualArray, 50));
     }
 }
