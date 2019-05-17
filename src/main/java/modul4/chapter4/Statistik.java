@@ -1,12 +1,8 @@
 package modul4.chapter4;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Statistik {
     private double[] zahlen;
@@ -15,7 +11,6 @@ public class Statistik {
     public Statistik(double[] zahlen) {
         this.zahlen = zahlen;
     }
-
 
     public double addieren() {
         return Arrays.stream(zahlen).sum();
@@ -37,7 +32,6 @@ public class Statistik {
         return Arrays.stream(zahlen).sum();
     }
 
-
     @Override
     public String toString() {
         return "Statistik{" +
@@ -45,24 +39,23 @@ public class Statistik {
                 '}';
     }
 
-    public int berechneModus() {
+    public double berechneModus() {
         Map<Double, Integer> mapToCount = new HashMap<>();
-        int length = zahlen.length;
-
-        for (int i = 0; i <= length - 1; i++) {
-            mapToCount.put(zahlen[i], 0);
-        }
 
         for (double v : zahlen) {
-            mapToCount.put(v, mapToCount.get(v) + 1);
+            mapToCount.put(v, mapToCount.getOrDefault(v, 0) + 1);
         }
 
+        double result = mapToCount.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+
         int x = 0;
-        for (Integer value : mapToCount.values()) {
-            if (x < value) {
-                x = value;
+        double key = 0d;
+        for (Map.Entry<Double, Integer> doubleIntegerEntry : mapToCount.entrySet()) {
+            if (x < doubleIntegerEntry.getValue()) {
+                x = doubleIntegerEntry.getValue();
+                key = doubleIntegerEntry.getKey();
             }
         }
-        return x;
+        return result;
     }
 }
