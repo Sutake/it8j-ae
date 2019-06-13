@@ -54,17 +54,7 @@ public class Statistik {
         for (double v : zahlen) {
             mapToCount.put(v, mapToCount.getOrDefault(v, 0) + 1);
         }
-
         double result = mapToCount.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
-/*
-        int x = 0;
-        double key = 0d;
-        for (Map.Entry<Double, Integer> doubleIntegerEntry : mapToCount.entrySet()) {
-            if (x < doubleIntegerEntry.getValue()) {
-                x = doubleIntegerEntry.getValue();
-                key = doubleIntegerEntry.getKey();
-            }
-        }*/
         return result;
     }
 }
