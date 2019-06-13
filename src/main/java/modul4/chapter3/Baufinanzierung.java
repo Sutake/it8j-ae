@@ -1,6 +1,6 @@
 package modul4.chapter3;
 
-public class Baufinanzierung {
+public class    Baufinanzierung {
 
     public static void main(String[] args) {
         Baufinanzierung baufinanzierung = new Baufinanzierung(100000, 7, 2);
@@ -43,11 +43,6 @@ public class Baufinanzierung {
             tilgung = tilgung + tempZinsen - zinsen;
             annuitaet = zinsen + tilgung;
         }
-
-        //correction because of the last continuous loop
-        darlehensbetrag = darlehensbetrag + tilgung;
-
-        darlehensbetrag = darlehensbetrag - tilgung;
 
         zinsen = darlehensbetrag * zinssatz / 100;
         tilgung = darlehensbetrag;
