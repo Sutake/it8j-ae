@@ -50,11 +50,9 @@ public class Statistik {
 
     public double berechneModus() {
         Map<Double, Integer> mapToCount = new HashMap<>();
-
         for (double v : zahlen) {
             mapToCount.put(v, mapToCount.getOrDefault(v, 0) + 1);
         }
-        double result = mapToCount.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
-        return result;
+        return mapToCount.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
     }
 }
