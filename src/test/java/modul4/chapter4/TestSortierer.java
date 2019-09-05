@@ -3,6 +3,8 @@ package modul4.chapter4;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 public class TestSortierer {
 
     @Test
