@@ -32,4 +32,19 @@ public class Sortierer {
         a[a.length - 1] = 0;
         return a;
     }
+
+    public static int[] sortInts(int[] myInts) {
+        for (int i = 1; i < myInts.length; i++) {
+            for( int j = myInts.length-1; j >= i; j--) {
+                if (myInts[j] < myInts[j-1]) {
+                    int temp = myInts[j];
+                    myInts[j] = myInts[j-1];
+                    myInts[j-1] = temp;
+                }
+            }
+        }
+        return myInts;
+    }
+
+
 }

@@ -3,8 +3,6 @@ package modul4.chapter4;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class TestStatistik {
 
     @Test

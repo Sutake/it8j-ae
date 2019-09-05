@@ -3,8 +3,6 @@ package modul4.chapter4;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class TestSortierer {
 
     @Test
@@ -21,6 +19,10 @@ public class TestSortierer {
         int[] actualArray = new int[]{10, 7, 61, 4, 75, 34};
 
         assertArrayEquals(new int[]{10, 7, 4, 75, 34, 0}, sortierer.deleteNumberFromArray(actualArray, 61));
+    }
 
+    @Test
+    void sortInts() {
+        assertArrayEquals(new int[]{1, 3, 4, 5}, Sortierer.sortInts(new int[]{4, 1, 5, 3}));
     }
 }
