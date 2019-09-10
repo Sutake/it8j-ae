@@ -7,15 +7,23 @@ public class Lotto {
     }
 
     //hier kommen die random Lottozahlen rein
-    private int[] randomLottoNumbers = new int[6];
+    private int[] randomLottoNumbers;
 
     public int calcResult(int[] inputNumbers) {
         int counter = 0;
         int[] sortedInputNumbers = sortInts(inputNumbers);
         int[] sortedLottoNumbers = sortInts(randomLottoNumbers);
-        for (int i = 0; i < sortedInputNumbers.length - 1; i++) {
+        /*for (int i = 0; i < sortedInputNumbers.length - 1; i++) {
             if (sortedInputNumbers[i] == sortedLottoNumbers[i]) {
                 counter ++;
+            }
+        }*/
+
+        for (int sortedLottoNumber : sortedLottoNumbers) {
+            for (int sortedInputNumber : sortedInputNumbers) {
+                if (sortedLottoNumber == sortedInputNumber) {
+                    counter++;
+                }
             }
         }
         return counter;
