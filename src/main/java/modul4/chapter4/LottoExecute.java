@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class LottoExecute {
     public static void main(String[] args) {
-        Random r = new Random();
-
 
         int[] randomLottoNumbers = new int[6];
         for (int i = 0; i < randomLottoNumbers.length; i++) {
