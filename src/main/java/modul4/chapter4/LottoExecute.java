@@ -9,6 +9,7 @@ public class LottoExecute {
         int[] randomLottoNumbers = new int[6];
         for (int i = 0; i < randomLottoNumbers.length; i++) {
             randomLottoNumbers[i] = new Random().nextInt(49);
+            System.out.println(randomLottoNumbers[i]);
         }
         int[] inputNumbers = new int[6];
         for (int i = 0; i < inputNumbers.length ; i++) {
@@ -23,6 +24,5 @@ public class LottoExecute {
         } else {
             System.out.println(" Sie haben " + lotto.calcResult(inputNumbers) + " richtige Zahlen");
         }
-
     }
 }
