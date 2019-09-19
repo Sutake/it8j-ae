@@ -1,4 +1,4 @@
-package modul5;
+package modul5.ae05;
 
 public class Main {
     public static void main(String[] args) {

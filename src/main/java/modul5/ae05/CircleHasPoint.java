@@ -1,10 +1,11 @@
-package modul5;
+package modul5.ae05;
 
-public class CircleIsPoint extends Point {
+public class CircleHasPoint {
+    private Point point;
     private double radius;
 
-    public CircleIsPoint(double x, double y, double radius) {
-        super(x, y);
+    public CircleHasPoint(double x, double y, double radius) {
+        point = new Point(x, y);
         this.radius = radius;
     }
 
@@ -16,7 +17,14 @@ public class CircleIsPoint extends Point {
         this.radius = radius;
     }
 
-    @Override
+    public double getX() {
+        return point.getX();
+    }
+
+    public double getY() {
+        return point.getY();
+    }
+
     public void print() {
         System.out.println(toString());
     }

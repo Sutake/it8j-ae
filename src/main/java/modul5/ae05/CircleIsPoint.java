@@ -1,13 +1,10 @@
-package modul5;
+package modul5.ae05;
 
-import java.sql.SQLOutput;
-
-public class CircleHasPoint {
-    private Point point;
+public class CircleIsPoint extends Point {
     private double radius;
 
-    public CircleHasPoint(double x, double y, double radius) {
-        point = new Point(x, y);
+    public CircleIsPoint(double x, double y, double radius) {
+        super(x, y);
         this.radius = radius;
     }
 
@@ -19,14 +16,7 @@ public class CircleHasPoint {
         this.radius = radius;
     }
 
-    public double getX() {
-        return point.getX();
-    }
-
-    public double getY() {
-        return point.getY();
-    }
-
+    @Override
     public void print() {
         System.out.println(toString());
     }
