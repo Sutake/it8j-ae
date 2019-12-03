@@ -12,6 +12,12 @@ public class Tabelle {
         return teams;
     }
 
+    @Override
+    public String toString() {
+        return "Tabelle{" +
+                "teams=" + teams +
+                '}';
+    }
     public void setTeams(List<Team> teams) {
         this.teams = teams;
     }
@@ -34,10 +40,6 @@ public class Tabelle {
 
         teams.sort(comparatorTeam);
         tabelle.setTeams(teams);
-        System.out.println("hey");
-
-
-
-
+        System.out.println(tabelle);
     }
 }
