@@ -1,10 +1,12 @@
 package modul6.ab04;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Tabelle {
     private List<Team> teams;
+    private static Comparator<Team> comparatorTeam = Comparator.comparingInt(Team::getPunktzahl).reversed().thenComparing(Team::getMannschaftsname);
 
     public List<Team> getTeams() {
         return teams;
@@ -30,9 +32,12 @@ public class Tabelle {
         Spielpaarung spielpaarung1 = new Spielpaarung(arsenal, barcelona,1,3);
         Spielpaarung spielpaarung2 = new Spielpaarung(barcelona, madrid,3,1);
 
+        teams.sort(comparatorTeam);
+        tabelle.setTeams(teams);
+        System.out.println("hey");
 
-        System.out.println(arsenal.getPunktzahl());
-        System.out.println(barcelona.getPunktzahl());
-        System.out.println(madrid.getPunktzahl());
+
+
+
     }
 }
