@@ -14,10 +14,14 @@ public class Tabelle {
 
     @Override
     public String toString() {
-        return "Tabelle{" +
-                "teams=" + teams +
-                '}';
+        String result = "";
+        for (Team team : teams) {
+            result += "Mannschaftsname: " + team.getMannschaftsname() + " Punkte: " + team.getPunktzahl() +"\n";
+        }
+
+        return result;
     }
+
     public void setTeams(List<Team> teams) {
         this.teams = teams;
     }
@@ -35,8 +39,8 @@ public class Tabelle {
         teams.add(barcelona);
         teams.add(madrid);
 
-        Spielpaarung spielpaarung1 = new Spielpaarung(arsenal, barcelona,1,3);
-        Spielpaarung spielpaarung2 = new Spielpaarung(barcelona, madrid,3,1);
+        Spielpaarung spielpaarung1 = new Spielpaarung(arsenal, barcelona, 1, 3);
+        Spielpaarung spielpaarung2 = new Spielpaarung(barcelona, madrid, 3, 1);
 
         teams.sort(comparatorTeam);
         tabelle.setTeams(teams);
