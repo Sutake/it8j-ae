@@ -30,6 +30,7 @@ public class Tabelle {
 
         Tabelle tabelle = new Tabelle();
         List<Team> teams = new ArrayList<>();
+        List<Spielpaarung> spielpaarungen = new ArrayList<>();
 
         Team arsenal = new Team("Arsenal", 0, 1);
         Team barcelona = new Team("Barcelona", 0, 2);
@@ -41,6 +42,9 @@ public class Tabelle {
 
         Spielpaarung spielpaarung1 = new Spielpaarung(arsenal, barcelona, 1, 3);
         Spielpaarung spielpaarung2 = new Spielpaarung(barcelona, madrid, 3, 1);
+
+        spielpaarungen.add(spielpaarung1);
+        spielpaarungen.add(spielpaarung2);
 
         teams.sort(comparatorTeam);
         tabelle.setTeams(teams);
