@@ -16,7 +16,7 @@ public class Tabelle {
     public String toString() {
         String result = "";
         for (Team team : teams) {
-            result += "Mannschaftsname: " + team.getMannschaftsname() + " Punkte: " + team.getPunktzahl() +"\n";
+            result += "Mannschaftsname: " + team.getMannschaftsname() + " Punkte: " + team.getPunktzahl() + "\n";
         }
 
         return result;

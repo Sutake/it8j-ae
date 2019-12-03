@@ -36,7 +36,7 @@ public class Team {
         this.id = id;
     }
 
-    public void addPoint(int point) {
+    void addPoint(int point) {
         punktzahl += point;
     }
 }
