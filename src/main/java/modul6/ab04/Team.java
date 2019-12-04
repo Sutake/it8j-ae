@@ -2,30 +2,29 @@ package modul6.ab04;
 
 public class Team {
 
-    private String mannschaftsname;
-    private int punktzahl;
+    private String name;
+    private int score;
     private int id;
 
-    public Team(String mannschaftsname, int punktzahl, int id) {
-        this.mannschaftsname = mannschaftsname;
-        this.punktzahl = punktzahl;
+    Team(String name, int id) {
+        this.name = name;
         this.id = id;
     }
 
-    public String getMannschaftsname() {
-        return mannschaftsname;
+    String getName() {
+        return name;
     }
 
-    public void setMannschaftsname(String mannschaftsname) {
-        this.mannschaftsname = mannschaftsname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getPunktzahl() {
-        return punktzahl;
+    int getScore() {
+        return score;
     }
 
-    public void setPunktzahl(int punktzahl) {
-        this.punktzahl = punktzahl;
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public int getId() {
@@ -37,6 +36,6 @@ public class Team {
     }
 
     void addPoint(int point) {
-        punktzahl += point;
+        score += point;
     }
 }
