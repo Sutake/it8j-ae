@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SoccerTable {
     private List<Team> teams;
-    private static final Comparator<Team> COMPARATOR_TEAM = Comparator.comparingInt(Team::getScore).reversed().thenComparing(Team::getName);
+    private static final Comparator<Team> COMPARATOR_TEAM = Comparator.comparingInt(Team::getPoint).thenComparingInt(Team::getGoal).reversed();
 
     public List<Team> getTeams() {
         return teams;
@@ -29,10 +29,17 @@ public class SoccerTable {
         }
     }
 
+    private void calculateGoals(List<Matchup> matchups) {
+        for (Matchup matchup : matchups) {
+            matchup.getTeam1().addGoal(matchup.getResultTeam1());
+            matchup.getTeam2().addGoal(matchup.getResultTeam2());
+        }
+    }
+
     private void createTable() {
         String result = "";
         for (Team team : teams) {
-            result += "Mannschaftsname: " + team.getName() + ", Punkte: " + team.getScore() + "\n";
+            result += "Mannschaftsname: " + team.getName() + ", Punkte: " + team.getPoint() + " , Tore: " + team.getGoal() + "\n";
         }
         System.out.println(result);
     }
@@ -50,7 +57,7 @@ public class SoccerTable {
         teams.add(barcelona);
         teams.add(madrid);
 
-        Matchup matchup1 = new Matchup(arsenal, barcelona, 1, 3);
+        Matchup matchup1 = new Matchup(arsenal, barcelona, 5, 1);
         Matchup matchup2 = new Matchup(barcelona, madrid, 3, 1);
 
         matchups.add(matchup1);
@@ -58,6 +65,7 @@ public class SoccerTable {
 
         soccerTable.setTeams(teams);
         soccerTable.calculateScores(matchups);
+        soccerTable.calculateGoals(matchups);
         teams.sort(COMPARATOR_TEAM);
         soccerTable.createTable();
     }
