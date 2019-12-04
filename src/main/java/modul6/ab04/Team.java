@@ -3,7 +3,7 @@ package modul6.ab04;
 public class Team {
 
     private String name;
-    private int point;
+    private int score;
     private int goal;
     private int id;
 
@@ -20,12 +20,12 @@ public class Team {
         this.name = name;
     }
 
-    public int getPoint() {
-        return point;
+    public int getScore() {
+        return score;
     }
 
-    public void setPoint(int point) {
-        this.point = point;
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public int getGoal() {
@@ -45,7 +45,7 @@ public class Team {
     }
 
     void addPoint(int point) {
-        this.point += point;
+        this.score += point;
     }
 
     void addGoal(int goal) {
