@@ -51,8 +51,15 @@ public class SoccerTable {
         Team barcelona = new Team("Barcelona", 2);
         Team madrid = new Team("Madrid", 3);
 
+        Matchup matchup1 = new Matchup(arsenal, barcelona);
+        Matchup matchup2 = new Matchup(barcelona, madrid);
+        matchup1.setResultTeam1(5);
+        matchup1.setResultTeam2(1);
+        matchup2.setResultTeam1(3);
+        matchup2.setResultTeam2(1);
+
         List<Team> teams = Arrays.asList(arsenal, barcelona, madrid);
-        List<Matchup> matchups = Arrays.asList(new Matchup(arsenal, barcelona, 5, 1), new Matchup(barcelona, madrid, 3, 1));
+        List<Matchup> matchups = Arrays.asList(matchup1, matchup2);
         soccerTable.setTeams(teams);
         soccerTable.calculateScores(matchups);
         soccerTable.calculateGoals(matchups);

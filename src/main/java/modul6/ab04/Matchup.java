@@ -6,11 +6,9 @@ public class Matchup {
     private int resultTeam1;
     private int resultTeam2;
 
-    Matchup(Team team1, Team team2, int resultTeam1, int resultTeam2) {
+    Matchup(Team team1, Team team2) {
         this.team1 = team1;
         this.team2 = team2;
-        this.resultTeam1 = resultTeam1;
-        this.resultTeam2 = resultTeam2;
     }
 
     public Team getTeam1() {
