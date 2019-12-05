@@ -5,6 +5,7 @@ public class Team {
     private String name;
     private int score;
     private int goal;
+    private int counterGoal;
     private int id;
 
     Team(String name, int id) {
@@ -36,6 +37,14 @@ public class Team {
         this.goal = goal;
     }
 
+    public int getCounterGoal() {
+        return counterGoal;
+    }
+
+    public void setCounterGoal(int counterGoal) {
+        this.counterGoal = counterGoal;
+    }
+
     public int getId() {
         return id;
     }
@@ -50,5 +59,9 @@ public class Team {
 
     void addGoal(int goal) {
         this.goal += goal;
+    }
+
+    void addCounterGoal( int counterGoal) {
+        this.counterGoal += counterGoal;
     }
 }
