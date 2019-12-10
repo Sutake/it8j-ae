@@ -73,5 +73,6 @@ public class SoccerTable {
         soccerTable.calculateCounterGoals(matchups);
         teams.sort(COMPARATOR_TEAM);
         soccerTable.createTable();
+        //lala
     }
 }
