@@ -18,9 +18,9 @@ public class SoccerTable {
 
     private void calculateScores(List<Matchup> matchups) {
         for (Matchup matchup : matchups) {
-            if (matchup.getResultTeam1() > matchup.getResultTeam2()) {
+            if (matchup.getGoalTeam1() > matchup.getGoalTeam2()) {
                 matchup.getTeam1().addPoint(3);
-            } else if (matchup.getResultTeam2() > matchup.getResultTeam1()) {
+            } else if (matchup.getGoalTeam2() > matchup.getGoalTeam1()) {
                 matchup.getTeam2().addPoint(3);
             } else {
                 matchup.getTeam1().addPoint(1);
@@ -31,15 +31,15 @@ public class SoccerTable {
 
     private void calculateGoals(List<Matchup> matchups) {
         for (Matchup matchup : matchups) {
-            matchup.getTeam1().addGoal(matchup.getResultTeam1());
-            matchup.getTeam2().addGoal(matchup.getResultTeam2());
+            matchup.getTeam1().addGoal(matchup.getGoalTeam1());
+            matchup.getTeam2().addGoal(matchup.getGoalTeam2());
         }
     }
 
     private void calculateCounterGoals(List<Matchup> matchups) {
         for (Matchup matchup : matchups) {
-            matchup.getTeam1().addCounterGoal(matchup.getResultTeam2());
-            matchup.getTeam2().addCounterGoal(matchup.getResultTeam1());
+            matchup.getTeam1().addCounterGoal(matchup.getGoalTeam2());
+            matchup.getTeam2().addCounterGoal(matchup.getGoalTeam1());
         }
     }
 
@@ -60,10 +60,10 @@ public class SoccerTable {
 
         Matchup matchup1 = new Matchup(arsenal, barcelona);
         Matchup matchup2 = new Matchup(barcelona, madrid);
-        matchup1.setResultTeam1(1);
-        matchup1.setResultTeam2(5);
-        matchup2.setResultTeam1(2);
-        matchup2.setResultTeam2(10);
+        matchup1.setGoalTeam1(1);
+        matchup1.setGoalTeam2(5);
+        matchup2.setGoalTeam1(2);
+        matchup2.setGoalTeam2(10);
 
         List<Team> teams = Arrays.asList(arsenal, barcelona, madrid);
         List<Matchup> matchups = Arrays.asList(matchup1, matchup2);
