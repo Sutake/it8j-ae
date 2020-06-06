@@ -5,6 +5,7 @@ public class Matchup {
     private Team team2;
     private int goalTeam1;
     private int goalTeam2;
+    private int asdsa;
 
     Matchup(Team team1, Team team2) {
         this.team1 = team1;
